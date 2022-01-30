@@ -2,13 +2,13 @@ from distutils.core import setup
 setup(
   name = 'hivemcapi',         # How you named your package folder (MyLib)
   packages = ['hivemcapi'],   # Chose the same as "name"
-  version = '0.1',      # Start with a small number and increase it with every change you make
+  version = '0.2',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'A api rapper for the hivemc api',   # Give a short description about your library
   author = 'Nagol12344',                   # Type in your name
   author_email = 'Hidden@hidden.com',      # Type in your E-Mail
   url = 'https://github.com/Nagol12344/HiveMCapi/',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/Nagol12344/HiveMCapi/archive/v_01.tar.gz',    # I explain this later on
+  download_url = 'https://github.com/Nagol12344/HiveMCapi/archive/refs/tags/v0.2.tar.gz',    # I explain this later on
   keywords = ['hivemc', 'api', 'hivemcapi'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
           'requests',
