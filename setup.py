@@ -7,8 +7,8 @@ setup(
   description = 'A api rapper for the hivemc api',   # Give a short description about your library
   author = 'Nagol12344',                   # Type in your name
   author_email = 'Hidden@hidden.com',      # Type in your E-Mail
-  url = 'https://github.com/user/reponame',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/user/reponame/archive/v_01.tar.gz',    # I explain this later on
+  url = 'https://github.com/Nagol12344/HiveMCapi/',   # Provide either the link to your github or to your website
+  download_url = 'https://github.com/Nagol12344/HiveMCapi/archive/v_01.tar.gz',    # I explain this later on
   keywords = ['hivemc', 'api', 'hivemcapi'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
           'requests',
