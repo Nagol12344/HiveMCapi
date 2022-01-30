@@ -1,7 +1,7 @@
 from distutils.core import setup
 setup(
-  name = 'HiveMCapi',         # How you named your package folder (MyLib)
-  packages = ['HiveMCapi'],   # Chose the same as "name"
+  name = 'hivemcapi',         # How you named your package folder (MyLib)
+  packages = ['hivemcapi'],   # Chose the same as "name"
   version = '0.1',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'A api rapper for the hivemc api',   # Give a short description about your library
