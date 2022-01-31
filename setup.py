@@ -1,14 +1,21 @@
-from distutils.core import setup
+from setuptools import setup
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
 setup(
   name = 'hivemcapi',         # How you named your package folder (MyLib)
   packages = ['hivemcapi'],   # Chose the same as "name"
   version = '1.0',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'A api rapper for the hivemc api',   # Give a short description about your library
+  long_description=long_description,
+    long_description_content_type="text/markdown",
+    project_urls={
+        "Bug Tracker": "https://github.com/Nagol12344/HiveMCapi/issues",
+    },
   author = 'Nagol12344',                   # Type in your name
   author_email = 'Hidden@hidden.com',      # Type in your E-Mail
   url = 'https://github.com/Nagol12344/HiveMCapi/',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/Nagol12344/HiveMCapi/archive/refs/tags/v0.2.tar.gz',    # I explain this later on
+  download_url = 'https://github.com/Nagol12344/HiveMCapi/releases/latest/',    # I explain this later on
   keywords = ['hivemc', 'api', 'hivemcapi'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
           'requests',
