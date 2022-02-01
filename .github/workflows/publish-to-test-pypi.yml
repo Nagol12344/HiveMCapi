@@ -21,21 +21,21 @@ jobs:
         --user
     - name: Build a binary wheel and a source tarball
       run: >-
-        python setup.py bdist_wheel
-        python setup.py sdist
+        python setup.py bdist_wheel\n
+        python setup.py sdist\n
         ## Get the file name of the wheel
-        WHEEL_FILE=$(ls dist/*.whl)
+        WHEEL_FILE=$(ls dist/*.whl)\n
         ## Get the file name of the source tarball
-        SOURCE_TAR_FILE=$(ls dist/*.tar.gz)
+        SOURCE_TAR_FILE=$(ls dist/*.tar.gz)\n
         ## Get the last file name of the wheel from https://test.pypi.org/project/hivemcapi/#files
-        LAST_WHEEL_FILE=$(curl -s https://test.pypi.org/project/hivemcapi/ | grep -oE 'hivemcapi-[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | tail -n 1)
+        LAST_WHEEL_FILE=$(curl -s https://test.pypi.org/project/hivemcapi/ | grep -oE 'hivemcapi-[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | tail -n 1)\n
         ## Get what version the last wheel file is
-        LAST_WHEEL_VERSION=$(echo $LAST_WHEEL_FILE | grep -oE '[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | grep -oE '[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | grep -oE '[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | grep -oE '[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | grep -oE '[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | grep -oE '[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | grep -oE '[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | grep -oE '[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | grep -oE '[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | grep -oE '[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | grep -oE '[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | grep -oE '[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | grep -oE '[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | grep -oE '[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | grep -oE '[0-9.]+-[0-9.]+
+        LAST_WHEEL_VERSION=$(echo $LAST_WHEEL_FILE | grep -oE '[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | grep -oE '[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | grep -oE '[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | grep -oE '[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | grep -oE '[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | grep -oE '[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | grep -oE '[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | grep -oE '[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | grep -oE '[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | grep -oE '[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | grep -oE '[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | grep -oE '[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | grep -oE '[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | grep -oE '[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl' | grep -oE '[0-9.]+-[0-9.]+\n
         ## Up the number of the last wheel file
-        NEW_WHEEL_FILE=$(echo $LAST_WHEEL_FILE | sed 's/[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl/'$(echo $LAST_WHEEL_VERSION | sed 's/[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl/'$(echo $LAST_WHEEL_VERSION | sed 's/[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl/'$(echo $LAST_WHEEL_VERSION | sed 's/[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl/'$(echo $LAST_WHEEL_VERSION | sed 's/[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl/'$(echo $LAST_WHEEL_VERSION | sed 's/[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl/'$(echo $LAST_WHEEL_VERSION | sed 's/[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl/'$(echo $LAST_WHEEL_VERSION | sed 's/[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl/'$(echo $LAST_WHEEL_VERSION | sed 's/[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl/'$(echo $LAST_WHEEL_VERSION | sed 's/[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl/'$(echo $LAST_WHEEL_VERSION | sed 's/[0-9.]+-[0-9.]+-py
-        mv $LAST_WHEEL_FILE $NEW_WHEEL_FILE
+        NEW_WHEEL_FILE=$(echo $LAST_WHEEL_FILE | sed 's/[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl/'$(echo $LAST_WHEEL_VERSION | sed 's/[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl/'$(echo $LAST_WHEEL_VERSION | sed 's/[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl/'$(echo $LAST_WHEEL_VERSION | sed 's/[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl/'$(echo $LAST_WHEEL_VERSION | sed 's/[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl/'$(echo $LAST_WHEEL_VERSION | sed 's/[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl/'$(echo $LAST_WHEEL_VERSION | sed 's/[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl/'$(echo $LAST_WHEEL_VERSION | sed 's/[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl/'$(echo $LAST_WHEEL_VERSION | sed 's/[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl/'$(echo $LAST_WHEEL_VERSION | sed 's/[0-9.]+-[0-9.]+-py[0-9.]+-none-any.whl/'$(echo $LAST_WHEEL_VERSION | sed 's/[0-9.]+-[0-9.]+-py\n
+        mv $LAST_WHEEL_FILE $NEW_WHEEL_FILE\n
         ## Do the same for the source tarball
-        mv $SOURCE_TAR_FILE $NEW_WHEEL_FILE.tar.gz
+        mv $SOURCE_TAR_FILE $NEW_WHEEL_FILE.tar.gz\n
         
     - name: Publish distribution 📦 to Test PyPI
       if: "!contains(github.event.head_commit.message, 'BULID')"
