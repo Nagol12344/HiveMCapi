@@ -21,8 +21,8 @@ jobs:
         --user
     - name: Build a binary wheel and a source tarball
       run: >-
-        python3 setup.py bdist_wheel
-        python3 setup.py sdist
+        python setup.py bdist_wheel
+        python setup.py sdist
         ## Get the file name of the wheel
         WHEEL_FILE=$(ls dist/*.whl)
         ## Get the file name of the source tarball
