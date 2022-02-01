@@ -22,6 +22,9 @@ jobs:
     - name: Build a binary wheel and a source tarball
       run: >-
         python3 setup.py bdist_wheel
+        ## Change the name of the wheel to have the sha256 hash of the file
+        ## in the filename.
+        mv dist/*.whl dist/{{ cookiecutter.project_slug }}-{{ cookiecutter.version }}.whl
     - name: Publish distribution 📦 to Test PyPI
       if: "!contains(github.event.head_commit.message, 'BULID')"
       uses: pypa/gh-action-pypi-publish@master
