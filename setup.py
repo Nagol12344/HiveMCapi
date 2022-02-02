@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setup(
   name = 'hivemcapi',         # How you named your package folder (MyLib)
   packages = ['hivemcapi'],   # Chose the same as "name"
-  version = '1.1.2',      # Start with a small number and increase it with every change you make
+  version = 'v2.0',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'A api rapper for the hivemc api',   # Give a short description about your library
   long_description=long_description,
