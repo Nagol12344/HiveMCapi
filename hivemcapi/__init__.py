@@ -4,3 +4,4 @@ from hivemcapi import hideseek
 from hivemcapi import sg
 from hivemcapi import twars
 from hivemcapi import murder
+from hivemcapi import cft
