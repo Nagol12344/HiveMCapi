@@ -1,4 +1,4 @@
-from hivemcapi import swars
+from hivemcapi.swars import swars
 from hivemcapi import deathrun
 from hivemcapi import hideseek
 from hivemcapi import sg
